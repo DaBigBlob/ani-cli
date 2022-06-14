@@ -1,15 +1,25 @@
 #!/bin/sh
+
 REPO="https://github.com/dabigblob/ani-cli.git"
+
 case "$(uname -o)" in
     Android*)
-        andr_base="/data/data/com.termux/files/usr"
-        rm -rf "${andr_base}/share/ani-cli"
-        git clone -b "master" "$REPO" "${andr_base}/share/ani-cli"
-        ln -sf "${andr_base}/share/ani-cli/ani-cli" "${andr_base}/bin/ani-cli"
-        exit 0
+        ins_base="/data/data/com.termux/files/usr"
         ;;
     *)
-        printf "This installer is only for Android. Bye."
+        printf "This uninstaller is only for Android. Bye."
         exit 1
         ;;
 esac
+
+if [ -d "${ins_base}/share" ] || [ -d "${ins_base}/bin" ]; then
+    mkdir -p "${ins_base}/share" "${ins_base}/bin"
+fi
+
+rm -rf "${ins_base}/share/ani-cli" "${ins_base}/bin/ani-cli"
+
+git clone -b "master" "$REPO" "${ins_base}/share/ani-cli"
+
+ln -sf "${ins_base}/share/ani-cli/ani-cli" "${ins_base}/bin/ani-cli"
+
+exit 0

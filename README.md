@@ -67,7 +67,7 @@ It doesn't work for all anime, but the ones it can't find will print out alongsi
 Install dependencies [(See below)](#Dependencies)
 
 ```sh
-curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/linux-osx-install" | sudo sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | sudo sh
 ```
 
 *Note that mpv installed through flatpak is not compatible*
@@ -79,7 +79,7 @@ Install dependencies [(See below)](#Dependencies)
 Install [HomeBrew](https://docs.brew.sh/Installation) if not installed.
 
 ```sh
-curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/linux-osx-install" | sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | sh
 ```
 
 *To install (with Homebrew) the dependencies required on Mac OS, you can run:*
@@ -94,11 +94,8 @@ brew install curl grep aria2 iina openssl@1.1 ffmpeg git
 *Note that the installation instruction below must be done inside 
 Powershell as **administrator**, not in Command Prompt*
 
-Install scoop [(Guide)](https://scoop.sh/)
-```
-scoop bucket add extras
-mkdir -p "$env:USERPROFILE/.cache"
-scoop install ani-cli -g
+```sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | sh
 ```
 
 *Make sure git bash is installed [(Install)](https://git-scm.com/download/win)*
@@ -128,13 +125,16 @@ echo 'am start --user 0 -a android.intent.action.VIEW -d "$1" -n is.xyz.mpv/.MPV
 
 * Linux:  
 ```sh
-curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/linux-osx-uninstall" | sudo sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/uninstall" | sudo sh
 ```
 * Mac:  
 ```sh
-curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/linux-osx-uninstall" | sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/uninstall" | sh
 ```
-* Windows: ```scoop uninstall ani-cli```
+* Windows:  
+```sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/uninstall" | sh
+```
 * Android:  
 ```sh
 curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/android-uninstall" | sh

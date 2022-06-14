@@ -2,12 +2,14 @@
 
 case "$(uname -o)" in
     Android*)
-        andr_base="/data/data/com.termux/files/usr"
-        rm -rf "${andr_base}/share/ani-cli" "${andr_base}/bin/ani-cli"
-        exit 0
+        ins_base="/data/data/com.termux/files/usr"
         ;;
     *)
         printf "This uninstaller is only for Android. Bye."
         exit 1
         ;;
 esac
+
+rm -rf "${ins_base}/share/ani-cli" "${ins_base}/bin/ani-cli"
+
+exit 0
