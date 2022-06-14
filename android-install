@@ -12,9 +12,7 @@ case "$(uname -o)" in
         ;;
 esac
 
-if [ -d "${ins_base}/share" ] || [ -d "${ins_base}/bin" ]; then
-    mkdir -p "${ins_base}/share" "${ins_base}/bin"
-fi
+mkdir -p "${ins_base}/share" "${ins_base}/bin"
 
 rm -rf "${ins_base}/share/ani-cli" "${ins_base}/bin/ani-cli"
 
