@@ -25,7 +25,7 @@
 A cli to browse and watch anime (alone AND with friends). This tool scrapes the site <a href="https://gogoplay5.com">gogoplay.</a>
 </h3>
 <h1 align="center">
-	INSTALL FIX FOR LINUX AND MACOS
+	INSTALL FIX FOR LINUX, MACOS AND ANDROID
 </h1>
 	
 <h1 align="center">
