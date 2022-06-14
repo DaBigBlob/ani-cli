@@ -1,0 +1,31 @@
+#!/bin/sh
+
+REPO="https://github.com/dabigblob/ani-cli.git"
+
+case "$(uname)" in
+    Darwin*)
+        ins_base="$(brew --prefix)"
+        ;;
+    Linux*)
+        ins_base="/usr/local"
+        ;;
+    MINGW64*)
+        ins_base="/usr/local"
+        ;;
+    *)
+        printf "This uninstaller is only for Windows, Linux and MacOS. Bye."
+        exit 1
+        ;;
+esac
+
+if [ -d "${ins_base}/share" ] || [ -d "${ins_base}/bin" ]; then
+    mkdir -p "${ins_base}/share" "${ins_base}/bin"
+fi
+
+rm -rf "${ins_base}/share/ani-cli" "${ins_base}/bin/ani-cli"
+
+git clone -b "master" "$REPO" "${ins_base}/share/ani-cli"
+
+ln -sf "${ins_base}/share/ani-cli/ani-cli" "${ins_base}/bin/ani-cli"
+
+exit 0
