@@ -107,7 +107,7 @@ curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | s
 Install termux [(Guide)](https://termux.com/)
 
 ```sh
-curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/android-install" | sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | sh
 ```
 Make sure to add the referrer in mpv by opening mpv [(playstore version)](https://play.google.com/store/apps/details?id=is.xyz.mpv), going into Settings -> Advanced -> Edit mpv.conf and adding:
 
@@ -137,7 +137,7 @@ curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/uninstall" |
 ```
 * Android:  
 ```sh
-curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/android-uninstall" | sh
+curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/uninstall" | sh
 ```
 
 ## Dependencies

@@ -7,13 +7,21 @@ case "$(uname)" in
         ins_base="$(brew --prefix)"
         ;;
     Linux*)
-        ins_base="/usr/local"
+        case "$(uname -o)" in
+            Android*)
+                ins_base="/data/data/com.termux/files/usr"
+                ;;
+            *)
+                #we're not considering non-GNU systems here as the -o flag is gnu coreutil specific
+                ins_base="/usr/local"
+                ;;
+        esac
         ;;
     MINGW64*)
         ins_base="/usr/local"
         ;;
     *)
-        printf "This uninstaller is only for Windows, Linux and MacOS. Bye."
+        printf "This uninstaller is only for Windows, Android, Linux and MacOS. Bye."
         exit 1
         ;;
 esac
