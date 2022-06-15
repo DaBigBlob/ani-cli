@@ -7,7 +7,7 @@ case "$(uname)" in
         ins_base="$(brew --prefix)"
         ;;
     Linux*)
-        case "$(uname -o)" in
+        case "$(uname -o)" in #the bsd version of uname does not support -o
             Android*)
                 ins_base="/data/data/com.termux/files/usr"
                 ;;
@@ -17,7 +17,7 @@ case "$(uname)" in
                 ;;
         esac
         ;;
-    MINGW64*)
+    MINGW64*) #we keep this case separate as there could be a better place to install in git bash
         ins_base="/usr/local"
         ;;
     *)
