@@ -63,7 +63,7 @@ update () {
 		if [ -z "$update" ]; then
 			inf "$filename is up to date :)"
 		else
-			if printf '%s' "$update" | patch "$i" - ; then
+			if printf '%s' "$update" | patch --binary "$i" - ; then
 				inf "$filename has been updated"
 			else
 				die "Can't update $filename for some reason!"
