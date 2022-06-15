@@ -69,8 +69,9 @@ Install dependencies [(See below)](#Dependencies)
 ```sh
 curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | sudo sh
 ```
-*Note that this installation method is for systems with GNU coreutils. If you dont use GNU, go to the discord support channel.*  
-*Also note that mpv installed through flatpak is not compatible*
+*Note that mpv installed through flatpak is not compatible*
+
+*Also note that if you don't use GNU, this install script MIGHT not work.*  
 
 ### MacOS
 
