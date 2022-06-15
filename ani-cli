@@ -59,11 +59,11 @@ update () {
 	for i ; do
 		filename="$(printf '%s' "$i" | sed "s_$project_root/__")"
 		update="$(curl -A "$agent" -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/$filename")" || die "Connection error"
-		update="$(printf '%s\n' "$update" | diff -u "$i" -)"
+		update="$(printf '%s' "$update" | diff -u "$i" -)"
 		if [ -z "$update" ]; then
 			inf "$filename is up to date :)"
 		else
-			if printf '%s\n' "$update" | patch "$i" - ; then
+			if printf '%s' "$update" | patch "$i" - ; then
 				inf "$filename has been updated"
 			else
 				die "Can't update $filename for some reason!"
