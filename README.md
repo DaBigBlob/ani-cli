@@ -11,13 +11,6 @@
 <a href="https://discord.gg/aqu7GpqVmR"><img src="https://pnggrid.com/wp-content/uploads/2021/05/Discord-Logo-Square-1024x1024.png" width="80"></a>
 <a href="https://nightly.revolt.chat/invite/4FKHbs78"><img src="https://developers.revolt.chat/img/logo.png" width="80"></a>
 <br>
-<a href="https://github.com/port19x"><img src="https://img.shields.io/badge/lead-port19x-lightblue"></a>
-<a href="https://github.com/CoolnsX"><img src="https://img.shields.io/badge/maintainer-CoolnsX-blue"></a>
-<a href="https://github.com/RaynardGerraldo"><img src="https://img.shields.io/badge/maintainer-RayGL-blue"></a>
-<br>
-<a href="https://github.com/71zenith"><img src="https://img.shields.io/badge/maintainer-71zenith-blue"></a>
-<a href="https://github.com/iamchokerman"><img src="https://img.shields.io/badge/maintainer-iamchokerman-blue"></a>
-<a href="https://github.com/Derisis13"><img src="https://img.shields.io/badge/maintainer-Derisis13-blue"></a>
 
 </p>
 
@@ -92,8 +85,7 @@ brew install curl grep aria2 iina openssl@1.1 ffmpeg git
 
 ### Windows
 
-*Note that the installation instruction below must be done inside 
-Powershell as **administrator**, not in Command Prompt*
+*Note that the installation instruction below must be done inside Git Bash, not in Command Prompt or Powershell*
 
 ```sh
 curl -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/install" | sh
