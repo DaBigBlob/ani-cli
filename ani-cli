@@ -59,7 +59,7 @@ update () {
 	for i ; do
 		filename="$(printf '%s' "$i" | sed "s_$project_root/__")"
 		update="$(curl -A "$agent" -s "https://raw.githubusercontent.com/dabigblob/ani-cli/master/$filename")" || die "Connection error"
-		update="$(printf '%s' "$update" | diff -u "$i" -)"
+		update="$(printf '%s' "$update" | diff -B -u "$i" -)"
 		if [ -z "$update" ]; then
 			inf "$filename is up to date :)"
 		else
